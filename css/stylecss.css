@@ -1,0 +1,48 @@
+body {background: black;
+
+}
+
+.botao{
+    font-family: Comic Sans MS;
+	color: white;
+    background: rgb(0, 81, 255);
+	text-decoration: none;
+	padding:  15px 85px;
+	border-radius: 5px;
+	border:  2px solid white;
+	position: absolute;
+	left: 50%;
+	top: 38%;
+	transform: translate(-50%, -50%);
+	font-size:  28px;
+	z-index: 4;
+}
+.botao:hover{
+	background: linear-gradient(90deg, #03a9f4, #f441a5, #ddcf5b, #03a9f4);
+	background-size: 400%;
+	border:  none;
+	animation: animacao linear infinite;
+	animation-duration: 6s;
+	cursor: pointer;
+}
+@keyframes animacao {
+	from {
+		background-position: 0%;
+	}
+	to {
+		background-position: 400%;
+	}
+}
+.botao:hover::before{
+	content: '';
+	position: absolute;
+	z-index: -1;
+	top: -5px;
+	left: -5px;
+	right: -5px;
+	bottom: -5px;
+	animation: animacao linear infinite;
+	animation-duration: 8s;
+	background: linear-gradient(90deg, #03a9f4, #f441a5, #ddcf5b, #03a9f4);
+	border-radius: 5px;
+}
